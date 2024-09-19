@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vincula o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Conexão com a fonte Google Sofadi One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+    <title>Pedra, Papel e Tesoura</title>
+</head>
+<body>
+    <!-- Header exibe o placar do jogo -->
+    <header>
+        <div class="scoreboard">
+            <h1>Pontuação</h1>
+            <h2>Computador: <span id="computer-score">0</span></h2>
+            <h2>Você: <span id="user-score">0</span></h2>
+        </div>
+    </header>
+    <!-- Main contém as opções de escolha e o resultado do jogo -->
+    <main class="container">
+        <!-- Resultados do jogo, mostrando a escolha do usuário e do computador -->
+        <div class="results">
+            <div>
+                <span class="user-result"><img src="./img/pedra.png" alt="Escolha do Usuário"></span>
+                <span class="computer-result"><img src="./img/pedra.png" alt="Escolha do Computador"></span>
+            </div>
+        </div>
+
+        <!-- Texto exibido com o resultado -->
+        <p class="result-text">Bora Jogar ?</p>
+
+        <!-- Opções de escolha: Pedra, Papel, Tesoura -->
+        <div class="options">
+            <span class="options-image">
+                <img src="./img/pedra.png" alt="Imagem Pedra">
+                <p>Pedra</p>
+            </span>
+
+            <span class="options-image">
+                <img src="./img/papel.png" alt="Imagem Papel">
+                <p>Papel</p>
+            </span>
+
+            <span class="options-image">
+                <img src="./img/tesoura.png" alt="Imagem Tesoura">
+                <p>Tesoura</p>
+            </span>
+        </div>
+        <!-- Botão para resetar a pontuação -->
+        <button class="reset-button">Resetar Pontuação</button>
+    </main>
+</body>
+<!-- Vincula o arquivo JavaScript -->
+<script src="scripts.js"></script>
+</html>

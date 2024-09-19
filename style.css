@@ -1,0 +1,173 @@
+/* Reset básico de margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo estilo geral do body */
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7fb;
+    font-family: "Sofadi One", system-ui;
+}
+
+/* Posicionando o header no topo */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Estilo para o título e texto de pontuação */
+h1 {
+    color: #7d2ae8;
+    font-weight: bold;
+}
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.scoreboard h2 {
+    font-size: 1.5rem;
+    color: #7d2ae8;
+    font-weight: bold;
+}
+
+/* Ajustando o main para deixar espaço para o header */
+main.container {
+    margin-top: 70px; /* Deixe espaço para o header fixo */
+}
+
+/* Estilo do container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 5rem;
+    border-radius: 15px;
+}
+
+/* Alinhando as imagens de resultado (usuário e computador) */
+.results div {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+
+    img {
+        width: 100px;
+    }
+}
+
+.user-result img {
+    transform: rotate(90deg); /* Gira a imagem do usuário */
+}
+
+.computer-result img {
+    transform: rotate(-90deg) rotateY(180deg); /* Gira a imagem do computador */
+}
+
+/* Texto do resultado no centro */
+.result-text {
+    text-align: center;
+    color: #7d2ae8;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+/* Animação para a escolha do usuário e do computador */
+.container.start .user-result {
+    transform-origin: left;
+    animation: userShakes 0.7s ease infinite;
+}
+
+@keyframes userShakes {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .computer-result {
+    transform-origin: right;
+    animation: computerShakes 0.7s ease infinite;
+}
+
+@keyframes computerShakes {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+/* Estilo das opções de escolha */
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+
+    p {
+        color: #7d2ae8;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.options-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.5; /* Efeito de transparência nas opções */
+
+    img {
+        width: 50px;
+    }
+}
+
+.options-image:hover {
+    opacity: 1; /* Aumenta a opacidade ao passar o mouse */
+}
+
+.options-image:active {
+    opacity: 1;
+    transform: translateY(-50px); /* Animação ao clicar */
+}
+
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #7d2ae8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.reset-button:hover {
+    background-color: #9c55fa;
+}
+
+.reset-button:active {
+    opacity: 0.8;
+}
