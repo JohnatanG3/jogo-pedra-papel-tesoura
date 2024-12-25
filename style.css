@@ -181,13 +181,8 @@ main.container {
         font-size: 20px;
     }
 
-    /* Ajustando o main para deixar espaço para o header */
-    main.container {
-        margin-top: 10px; /* Deixe espaço para o header fixo */
-        align-items: center;
-    }
-
     .container {
         width: 100%;
+        align-items: center;
     }
 }
